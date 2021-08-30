@@ -2,9 +2,9 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: 'Montserrat', sans-serif;
   /* font-family: 'Montserrat', sans-serif; */
   /* font-family: 'Lato', sans-serif; */
+  font-family: 'Montserrat', sans-serif;
   color: #272829;
 }
 
@@ -218,21 +218,40 @@ h1, h2, h3, h4, h5, h6 {
   color: #000000;
 }
 
+@media (max-width: 420px) {
+  #hero h1 {
+    font-size: 4vmax;
+    line-height: 24px;
+  }
+
+  #hero .social-links a {
+    font-size: 16px;
+    /* display: inline-block;
+    color: #45505b;
+    line-height: 1; */
+    margin-right: 14px;
+    /* transition: 0.3s; */
+  }
+}
+
 @media (max-width: 992px) {
   #hero {
     text-align: center;
-    /* background-position: center; */
-    
   }
-  /* #hero h1 {
-    font-size: 32px;
-    line-height: 36px;
+}
+
+@media (min-width: 1366px) {
+  #hero h1 {
+    margin-bottom: 40px;
   }
+
   #hero p {
-    margin-top: 10px;
-    font-size: 20px;
-    line-height: 24px;
-  } */
+    margin: 40px 0 60px 0;
+  }
+
+  #hero .social-links a {
+    font-size: 36px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -292,12 +311,14 @@ section {
 }
 
 /*--------------------------------------------------------------
-# About Skills
+# About 
 --------------------------------------------------------------*/
 
 .about p {
   font-size: 3.5vmax;
-  font-weight: 200;
+  font-weight: 300;
+  text-align: justify;
+  text-justify: auto;
 }
 
 
@@ -312,7 +333,7 @@ section {
 
 .techncal-skills .skill h3 {
   font-weight: 400;
-  font-size: 26px;
+  font-size: 3vmax;
   color: #728394;
 }
 
@@ -351,7 +372,6 @@ section {
   .techncal-skills .skill h3 {
     font-weight: 500;
     font-size: 22px;
-    color: #728394;
   }
 
   .techncal-skills .icon {
@@ -362,6 +382,42 @@ section {
 
   .techncal-skills .icon i {
     font-size: 36px;
+  }
+}
+
+
+@media (max-width: 420px) {
+  .techncal-skills .skill {
+    margin-bottom: 25px;
+  }
+
+  .techncal-skills .icon {
+    margin-right: 2px;
+    /* margin-bottom: 24px; */
+    width: 44px;
+    height: 44px;
+  }
+
+  .techncal-skills .icon i {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1366px) {
+  /* .techncal-skills .skill h3 {
+    font-weight: 500;
+    font-size: 3vmax;
+  } */
+
+  .techncal-skills .icon {
+    margin-right: 12px;
+    /* margin-bottom: 24px; */
+    width: 140px;
+    height: 140px;
+  }
+
+  .techncal-skills .icon i {
+    font-size: 80px;
   }
 }
 
@@ -449,7 +505,7 @@ tooltip
 .contact .info h4 {
   padding: 0 0 0 60px;
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 400;
   margin-bottom: 5px;
   color: #45505b;
 }
@@ -566,6 +622,38 @@ tooltip
   }
 }
 
+@media (min-width: 1365px) {
+  .contact .info i {
+    font-size: 34px;
+    /* color: #45505b;
+    float: left; */
+    width: 64px;
+    height: 64px;
+    margin-right: 8px;
+    /* background: #eef7ff;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+    border-radius: 8px;
+    /* transition: all 0.3s ease-in-out; */
+  }
+
+  .contact .info h4 {
+    padding: 0 0 0 60px;
+    font-size: 28px;
+    font-weight: 400;
+    /* margin-bottom: 5px; */
+    color: #45505b;
+  }
+  
+  .contact .info p {
+    padding: 0 0 0 74px;
+    margin-bottom: 0;
+    font-size: 18px;
+    color: #728394;
+  }
+}
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
@@ -629,6 +717,29 @@ tooltip
 #footer .credits {
   font-size: 13px;
   font-weight: 100;
+}
+
+@media (max-width: 420px) {
+  #footer h3 {
+    font-size: 2vmax;
+    font-weight: 200;
+    letter-spacing: 6px;
+    margin: 0 0 15px 0;
+  }
+
+  #footer .copyright {
+    margin: 0 0 0 0;
+    font-size: 1.6vmax;
+    font-weight: 200;
+  }
+}
+
+@media (min-width: 1366px) {
+  #footer .copyright {
+    margin: 0 0 0 0;
+    font-size: 1.4vmax;
+    font-weight: 200;
+  }
 }
 
 
