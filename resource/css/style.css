@@ -2,7 +2,9 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: 'Lato', sans-serif;
+  /* font-family: 'Montserrat', sans-serif; */
+  /* font-family: 'Lato', sans-serif; */
+  font-family: 'Montserrat', sans-serif;
   color: #272829;
 }
 
@@ -17,7 +19,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -33,7 +35,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #7e7e7e;
   /* width: 40 px; */
   height: 40px;
-  /* border-radius: 50px; */
+  border-radius: 4px;
   transition: all 0.4s;
 }
 
@@ -159,7 +161,8 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 992px) {
   #hero {
-    padding-left: 160px;
+    padding-left: 120px;
+    padding-right: 120px;
   }
 }
 
@@ -175,8 +178,11 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero h1 {
   margin: 0;
-  font-size: 64px;
-  font-weight: 700;
+  /* 74px */
+  /* font-size:calc(0px + 5.78125vw); */
+  /* font-size: 5.78125vw;  */
+  font-size: 5.78125vmax;
+  font-weight: 300;
   line-height: 56px;
   color: #45505b;
 }
@@ -184,8 +190,10 @@ h1, h2, h3, h4, h5, h6 {
 #hero p {
   color: #45505b;
   margin: 15px 0 0 0;
-  font-size: 26px;
-  font-family: 'Lato', sans-serif;
+  /* 36px */
+  font-size: 2.8125vmax;
+  font-weight: 200;
+  font-family: 'Montserrat', sans-serif;
 }
 
 #hero p span {
@@ -194,7 +202,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero .social-links {
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 #hero .social-links a {
@@ -207,21 +215,51 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero .social-links a:hover {
-  color: #0563bb;
+  color: #000000;
+}
+
+@media (max-width: 420px) {
+  #hero {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../../assets/img/hero-bg-center.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  #hero h1 {
+    font-size: 4vmax;
+    line-height: 24px;
+  }
+
+  #hero .social-links a {
+    font-size: 16px;
+    /* display: inline-block;
+    color: #45505b;
+    line-height: 1; */
+    margin-right: 14px;
+    /* transition: 0.3s; */
+  }
 }
 
 @media (max-width: 992px) {
   #hero {
     text-align: center;
   }
+}
+
+@media (min-width: 1366px) {
   #hero h1 {
-    font-size: 32px;
-    line-height: 36px;
+    margin-bottom: 40px;
   }
+
   #hero p {
-    margin-top: 10px;
-    font-size: 20px;
-    line-height: 24px;
+    margin: 40px 0 60px 0;
+  }
+
+  #hero .social-links a {
+    font-size: 36px;
   }
 }
 
@@ -239,7 +277,7 @@ section {
 }
 
 .section-title h2 {
-  font-size: 32px;
+  font-size: 3.75vmax;
   font-weight: normal;
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -274,6 +312,26 @@ section {
   margin-bottom: 0;
 }
 
+@media (max-width: 768px) {
+  .section-title {
+    text-align: left;
+    padding-bottom: 00px;
+  }
+}
+
+/*--------------------------------------------------------------
+# About 
+--------------------------------------------------------------*/
+
+.about p {
+  font-size: 3.3vmax;
+  font-weight: 200;
+  /* text-align: justify; */
+  /* text-justify: auto; */
+}
+
+
+
 
 /*--------------------------------------------------------------
 # Technical Skills
@@ -283,8 +341,8 @@ section {
 }
 
 .techncal-skills .skill h3 {
-  font-weight: 700;
-  font-size: 26px;
+  font-weight: 400;
+  font-size: 3vmax;
   color: #728394;
 }
 
@@ -303,14 +361,14 @@ section {
 .techncal-skills .icon {
   /* margin: 0 auto; */
   margin-right: 10px;
-  width: 60px;
-  height: 60px;
+  width: 90px;
+  height: 90px;
   transition: ease-in-out 0.3s;
   position: relative;
 }
 
 .techncal-skills .icon i {
-  font-size: 36px;
+  font-size: 54px;
   transition: 0.5s;
   position: relative;
 }
@@ -323,17 +381,52 @@ section {
   .techncal-skills .skill h3 {
     font-weight: 500;
     font-size: 22px;
-    color: #728394;
   }
 
   .techncal-skills .icon {
     margin-right: 6px;
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
   }
 
   .techncal-skills .icon i {
-    font-size: 28px;
+    font-size: 36px;
+  }
+}
+
+
+@media (max-width: 420px) {
+  .techncal-skills .skill {
+    margin-bottom: 25px;
+  }
+
+  .techncal-skills .icon {
+    margin-right: 2px;
+    /* margin-bottom: 24px; */
+    width: 44px;
+    height: 44px;
+  }
+
+  .techncal-skills .icon i {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1366px) {
+  /* .techncal-skills .skill h3 {
+    font-weight: 500;
+    font-size: 3vmax;
+  } */
+
+  .techncal-skills .icon {
+    margin-right: 12px;
+    /* margin-bottom: 24px; */
+    width: 140px;
+    height: 140px;
+  }
+
+  .techncal-skills .icon i {
+    font-size: 80px;
   }
 }
 
@@ -406,7 +499,7 @@ tooltip
 
 .contact .info i {
   font-size: 20px;
-  color: #0563bb;
+  color: #45505b;
   float: left;
   width: 44px;
   height: 44px;
@@ -414,14 +507,14 @@ tooltip
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50px;
+  border-radius: 4px;
   transition: all 0.3s ease-in-out;
 }
 
 .contact .info h4 {
   padding: 0 0 0 60px;
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: 5px;
   color: #45505b;
 }
@@ -438,7 +531,7 @@ tooltip
 }
 
 .contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
-  background: #0563bb;
+  background: #45505b;
   color: #fff;
 }
 
@@ -538,6 +631,38 @@ tooltip
   }
 }
 
+@media (min-width: 1365px) {
+  .contact .info i {
+    font-size: 34px;
+    /* color: #45505b;
+    float: left; */
+    width: 64px;
+    height: 64px;
+    margin-right: 8px;
+    /* background: #eef7ff;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+    border-radius: 8px;
+    /* transition: all 0.3s ease-in-out; */
+  }
+
+  .contact .info h4 {
+    padding: 0 0 0 60px;
+    font-size: 28px;
+    font-weight: 400;
+    /* margin-bottom: 5px; */
+    color: #45505b;
+  }
+  
+  .contact .info p {
+    padding: 0 0 0 74px;
+    margin-bottom: 0;
+    font-size: 18px;
+    color: #728394;
+  }
+}
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
@@ -550,10 +675,12 @@ tooltip
 }
 
 #footer h3 {
-  font-size: 36px;
-  font-weight: 700;
+  font-size: 2.5vmax;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 8px;
   position: relative;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   padding: 0;
   margin: 0 0 15px 0;
 }
@@ -592,10 +719,36 @@ tooltip
 
 #footer .copyright {
   margin: 0 0 5px 0;
+  font-size: 13px;
+  font-weight: 200;
 }
 
 #footer .credits {
   font-size: 13px;
+  font-weight: 100;
+}
+
+@media (max-width: 420px) {
+  #footer h3 {
+    font-size: 2vmax;
+    font-weight: 200;
+    letter-spacing: 6px;
+    margin: 0 0 15px 0;
+  }
+
+  #footer .copyright {
+    margin: 0 0 0 0;
+    font-size: 1.6vmax;
+    font-weight: 200;
+  }
+}
+
+@media (min-width: 1366px) {
+  #footer .copyright {
+    margin: 0 0 0 0;
+    font-size: 1.4vmax;
+    font-weight: 200;
+  }
 }
 
 
